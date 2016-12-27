@@ -2,4 +2,6 @@
 # Cookbook:: sourcetree
 # Recipe:: default
 #
-# Copyright:: 2016, The Authors, All Rights Reserved.
+# Copyright:: 2017, Tyler Wong, All Rights Reserved.
+
+include_recipe 'sourcetree::windows'

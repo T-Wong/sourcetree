@@ -1,12 +1,12 @@
 #
 # Cookbook:: sourcetree
-# Spec:: default
+# Spec:: windows
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'sourcetree::default' do
+describe 'sourcetree::windows' do
   context 'When all attributes are default, on windows' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new(platform: 'windows', version: '2012R2')
@@ -17,8 +17,8 @@ describe 'sourcetree::default' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'includes the windows recipe' do
-      expect(chef_run).to include_recipe('sourcetree::windows')
+    it 'installs sourcetree' do
+      expect(chef_run).to install_windows_package('SourceTree')
     end
   end
 end

@@ -13,8 +13,11 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: windows-81
+    driver:
+      box: aartemjevas/windows81Pro_64-chef
+      customize:
+        memory: 2048
 
 suites:
   - name: default
