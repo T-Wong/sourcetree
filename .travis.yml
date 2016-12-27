@@ -6,8 +6,7 @@ addons:
     packages:
       - chefdk
 
-# Don't `bundle install`
-install: echo "skip bundle install"
+script "bundle exec rake build"
 
 branches:
   only:
