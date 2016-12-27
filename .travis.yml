@@ -6,7 +6,8 @@ addons:
     packages:
       - chefdk
 
-script "bundle exec rake build"
+gemfile:
+  - Gemfile
 
 branches:
   only:
