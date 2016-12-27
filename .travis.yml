@@ -1,3 +1,4 @@
+# Use Travis's cointainer based infrastructure
 sudo: false
 addons:
   apt:
@@ -6,8 +7,8 @@ addons:
     packages:
       - chefdk
 
-gemfile:
-  - Gemfile
+# Don't `bundle install`
+install: echo "skip bundle install"
 
 branches:
   only:
@@ -19,6 +20,8 @@ before_script:
 
 script:
   - /opt/chefdk/embedded/bin/chef --version
-  - /opt/chefdk/embedded/bin/cookstyle --version
+  - /opt/chefdk/embedded/bin/rubocop --version
+  - /opt/chefdk/embedded/bin/rubocop
   - /opt/chefdk/embedded/bin/foodcritic --version
-  - /opt/chefdk/bin/chef exec rake
+  - /opt/chefdk/embedded/bin/foodcritic . --exclude spec
+  - /opt/chefdk/embedded/bin/rspec
