@@ -1,4 +1,4 @@
-# sourcetree
+# SourceTree
 [![Build Status](https://travis-ci.org/T-Wong/sourcetree.svg?branch=master)](https://travis-ci.org/T-Wong/sourcetree) [![Code Climate](https://codeclimate.com/github/T-Wong/sourcetree/badges/gpa.svg)](https://codeclimate.com/github/T-Wong/sourcetree) [![Cookbook Version](https://img.shields.io/cookbook/v/sourcetree.svg)](https://supermarket.chef.io/cookbooks/sourcetree)
 
 Installs and configures SourceTree on a Windows system. The default recipe of this cookbook will install SourceTree version `1.9.10.0`.
@@ -15,6 +15,13 @@ Installs and configures SourceTree on a Windows system. The default recipe of th
 * `node['sourcetree']['windows']['source']` - The source URI of where the SourceTree executable is located.
 * `node['sourcetree']['windows']['version']` - The version of SourceTree to install. Make sure the corresponding SourceTree executable is in the source repository. Default is `1.9.10.0`.
 * `node['sourcetree']['windows']['checksum']` - The SHA256 checksum of the SourceTree executable for the coressponding version.
+
+## Recipes
+### default
+The default recipe of this cookbook will install version `1.9.10.0` of SourceTree on a Windows system.
+
+### windows
+This recipe installs SourceTree on a Windows system.
 
 ## Usage
 Place a dependency on the sourcetree cookbook in your cookbook's metadata.rb
