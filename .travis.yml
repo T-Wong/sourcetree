@@ -15,7 +15,7 @@ branches:
     - master
 
 # Ensure we make ChefDK's Ruby the default
-- before_script:
+before_script:
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
 
 script:
