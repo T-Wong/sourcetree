@@ -1,5 +1,6 @@
 # SourceTree
-[![Build Status](https://travis-ci.org/T-Wong/sourcetree.svg?branch=master)](https://travis-ci.org/T-Wong/sourcetree) [![Code Climate](https://codeclimate.com/github/T-Wong/sourcetree/badges/gpa.svg)](https://codeclimate.com/github/T-Wong/sourcetree) [![Cookbook Version](https://img.shields.io/cookbook/v/sourcetree.svg)](https://supermarket.chef.io/cookbooks/sourcetree)
+[![Build Status](https://travis-ci.org/T-Wong/sourcetree.svg?branch=master)](https://travis-ci.org/T-Wong/sourcetree)
+[![Cookbook Version](https://img.shields.io/cookbook/v/sourcetree.svg)](https://supermarket.chef.io/cookbooks/sourcetree)
 
 Installs and configures SourceTree on a Windows system. The default recipe of this cookbook will install SourceTree version `1.9.10.0`.
 
