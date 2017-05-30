@@ -1,8 +1,8 @@
 # SourceTree
-[![Build Status](https://travis-ci.org/T-Wong/sourcetree.svg?branch=master)](https://travis-ci.org/T-Wong/sourcetree)
+[![Build status](https://ci.appveyor.com/api/projects/status/xp8qsnpl70thigt4/branch/master?svg=true)](https://ci.appveyor.com/project/T-Wong/sourcetree/branch/master)
 [![Cookbook Version](https://img.shields.io/cookbook/v/sourcetree.svg)](https://supermarket.chef.io/cookbooks/sourcetree)
 
-Installs and configures SourceTree on a Windows system. The default recipe of this cookbook will install SourceTree version `1.9.10.0`.
+Installs and configures SourceTree on a Windows system. The default recipe of this cookbook will install SourceTree version `2.0.20.1`.
 
 ## Requirements
 ### Platforms
@@ -14,12 +14,12 @@ Installs and configures SourceTree on a Windows system. The default recipe of th
 ## Attributes
 ### Windows
 * `node['sourcetree']['windows']['source']` - The source URI of where the SourceTree executable is located.
-* `node['sourcetree']['windows']['version']` - The version of SourceTree to install. Make sure the corresponding SourceTree executable is in the source repository. Default is `1.9.10.0`.
-* `node['sourcetree']['windows']['checksum']` - The SHA256 checksum of the SourceTree executable for the coressponding version.
+* `node['sourcetree']['windows']['version']` - The version of SourceTree to install. Make sure the corresponding SourceTree executable is in the source repository. Default is `2.0.20.1`.
+* `node['sourcetree']['windows']['checksum']` - The SHA256 checksum of the SourceTree executable for the corresponding version.
 
 ## Recipes
 ### default
-The default recipe of this cookbook will install version `1.9.10.0` of SourceTree on a Windows system.
+The default recipe of this cookbook will install version `2.0.20.1` of SourceTree on a Windows system.
 
 ### windows
 This recipe installs SourceTree on a Windows system.
@@ -28,7 +28,7 @@ This recipe installs SourceTree on a Windows system.
 Place a dependency on the sourcetree cookbook in your cookbook's metadata.rb
 
 ```ruby
-depends 'sourcetree', '~> 1.0.0'
+depends 'sourcetree', '~> 1.1.0'
 ```
 
 Then, in a recipe:
@@ -40,7 +40,7 @@ include_recipe 'sourcetree::default'
 or you may add this cookbook directly in a run-list:
 
 ```ruby
-recipe[sourcetree]
+recipe[sourcetree::default]
 ```
 
 ## License & Authors
