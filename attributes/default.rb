@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default['sourcetree']['windows']['source'] = 'http://downloads.atlassian.com/software/sourcetree/windows'
+default['sourcetree']['windows']['source'] = 'http://downloads.atlassian.com/software/sourcetree/windows/ga'
 default['sourcetree']['windows']['version'] = '2.0.20.1'
 default['sourcetree']['windows']['checksum'] = '4eb706d8ffc7c6c30a1e5c677147ff09da4ba70aa8be01b2a7edce46af902eba'
