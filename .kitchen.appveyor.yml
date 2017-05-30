@@ -1,0 +1,32 @@
+---
+driver:
+  name: proxy
+  host: localhost
+  reset_command: "exit 0"
+  port: 5985
+  username: <%= ENV["machine_user"] %>
+  password: <%= ENV["machine_pass"] %>
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-7
+    driver:
+      box: aartemjevas/windows7PRO_64-chef
+      customize:
+        memory: 2048
+  - name: windows-81
+    driver:
+      box: aartemjevas/windows81Pro_64-chef
+      customize:
+        memory: 2048
+
+suites:
+  - name: default
+    run_list:
+      - recipe[sourcetree::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
