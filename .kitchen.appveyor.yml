@@ -28,5 +28,5 @@ suites:
       - recipe[sourcetree::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default
     attributes:
