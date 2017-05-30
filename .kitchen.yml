@@ -4,15 +4,17 @@ driver:
 
 provisioner:
   name: chef_zero
-  # You may wish to disable always updating cookbooks in CI or other testing environments.
-  # For example:
-  #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
 
 verifier:
   name: inspec
 
 platforms:
+  - name: windows-7
+    driver:
+      box: aartemjevas/windows7PRO_64-chef
+      customize:
+        memory: 2048
   - name: windows-81
     driver:
       box: aartemjevas/windows81Pro_64-chef
@@ -25,5 +27,5 @@ suites:
       - recipe[sourcetree::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default
     attributes:
