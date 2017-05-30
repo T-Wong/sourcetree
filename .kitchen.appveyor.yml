@@ -14,16 +14,7 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: windows-7
-    driver:
-      box: aartemjevas/windows7PRO_64-chef
-      customize:
-        memory: 2048
-  - name: windows-81
-    driver:
-      box: aartemjevas/windows81Pro_64-chef
-      customize:
-        memory: 2048
+  - name: windows-2012R2
 
 suites:
   - name: default
