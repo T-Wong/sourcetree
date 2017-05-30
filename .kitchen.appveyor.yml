@@ -14,7 +14,7 @@ provisioner:
   name: chef_zero
 
 platforms:
-  name: windows-2012R2
+  - name: windows-2012R2
 
 suites:
   - name: default
